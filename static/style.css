@@ -1,0 +1,78 @@
+/* styles.css */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 100px;
+}
+
+.login-container, .register-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-title, .register-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+button {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    border-bottom: 2px solid #444; /* Darker border for sleek look */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white; /* White text color for links */
+    font-size: 1rem;
+    padding: 10px 15px; /* Some padding for better spacing */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f8f9fa; /* Slightly lighter white on hover */
+    background-color: #444; /* Dark background on hover */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white; /* White color for navbar brand */
+}
+
+.navbar-toggler-icon {
+    background-color: white; /* White color for the hamburger icon */
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Optional: you can add more custom styles for other parts of your page */
