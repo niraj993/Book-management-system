@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Book List</h1>
+
+    <!-- Add New Book Button -->
+    <div class="text-center mb-3">
+        {% comment %} <a href="{% url 'book_create' %}" class="btn btn-success">Add a New Book</a> {% endcomment %}
+    </div>
+
+    <!-- Book List -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for book in books %}
+            <div class="col">
+                <div class="card h-100">
+                    {% if book.image %}
+                        <img src="{{ book.image.url }}" class="card-img-top" alt="{{ book.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.title }}</h5>
+                        <p class="card-text"><strong>Author:</strong> {{ book.author }}</p>
+                        <p class="card-text">{{ book.description|truncatewords:20 }}</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="{% url 'book_update' book.id %}" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="{% url 'book_delete' book.id %}" class="btn btn-danger btn-sm">Delete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+ 
